@@ -22,5 +22,7 @@ except mariadb.Error as e:
 conn.commit() 
 print(f"Last Inserted ID: {cur.lastrowid}")
 
-    
+
+#this is a random comment
+
 conn.close()
