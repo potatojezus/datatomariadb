@@ -13,7 +13,8 @@ cur = conn.cursor()
     
 #insert information 
 try: 
-    cur.execute("INSERT INTO TestTable1 (TestCol1, TestCol2, TestCol3, TestCol4) VALUES (?, ?, ?, ?)", ("Maria", 2, 2, 2)) 
+    cur.execute("""INSERT INTO TestTable1 (TestCol1, TestCol2, TestCol3, TestCol4) 
+                    VALUES (?, ?, ?, ?)""", ("Maria", 3, 2, 2)) 
 except mariadb.Error as e: 
     print(f"Error: {e}")
 
