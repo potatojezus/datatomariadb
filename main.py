@@ -18,7 +18,9 @@ try:
 except mariadb.Error as e: 
     print(f"Error: {e}")
 
+#something is wrong with the below, because the Last Inserted ID always retuns None
 conn.commit() 
 print(f"Last Inserted ID: {cur.lastrowid}")
+
     
 conn.close()
